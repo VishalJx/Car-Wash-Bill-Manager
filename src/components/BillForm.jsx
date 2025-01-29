@@ -60,7 +60,7 @@ const BillForm = ({ closeModal, editBill: editBillData }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Amount ($)</label>
+            <label className="block text-sm font-medium mb-1">Amount (Rs)</label>
             <input
               type="number"
               value={formData.amount}

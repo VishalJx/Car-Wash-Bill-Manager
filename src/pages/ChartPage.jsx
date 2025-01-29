@@ -39,7 +39,7 @@ const ChartPage = () => {
         </div>
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-lg font-medium text-gray-400 mb-2">Monthly Average</h3>
-          <p className="text-3xl font-bold">${monthlyAverage.toFixed(2)}</p>
+          <p className="text-3xl font-bold">Rs.{monthlyAverage.toFixed(2)}</p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ const ChartPage = () => {
               <Tooltip
                 contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151' }}
                 labelStyle={{ color: '#9CA3AF' }}
-                formatter={value => [`$${value.toFixed(2)}`, 'Amount']}
+                formatter={value => [`Rs.${value.toFixed(2)}`, 'Amount']}
               />
               <Line 
                 type="monotone" 
@@ -82,14 +82,14 @@ const ChartPage = () => {
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-lg font-medium text-gray-400 mb-2">Highest Monthly Expense</h3>
           <p className="text-3xl font-bold">
-            ${Math.max(...chartData.map(item => item.total)).toFixed(2)}
+            Rs.{Math.max(...chartData.map(item => item.total)).toFixed(2)}
           </p>
         </div>
         {/* Lowest Expense */}
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-lg font-medium text-gray-400 mb-2">Lowest Monthly Expense</h3>
           <p className="text-3xl font-bold">
-            ${Math.min(...chartData.map(item => item.total)).toFixed(2)}
+            Rs. {Math.min(...chartData.map(item => item.total)).toFixed(2)}
           </p>
         </div>
         {/* Total Months */}

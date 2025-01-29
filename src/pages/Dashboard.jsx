@@ -50,11 +50,11 @@ const OptimizationResults = ({ selectedBills, totalSelected, budget, onClose, al
         <div className="bg-gray-700 rounded-lg p-4 mb-6">
           <div className="flex justify-between mb-2">
             <span>Monthly Budget</span>
-            <span className="font-medium">${budget.toFixed(2)}</span>
+            <span className="font-medium">Rs.{budget.toFixed(2)}</span>
           </div>
           <div className="flex justify-between mb-2">
             <span>Total Selected</span>
-            <span className="font-medium">${totalSelected.toFixed(2)}</span>
+            <span className="font-medium">Rs.{totalSelected.toFixed(2)}</span>
           </div>
           <div className="border-t border-gray-600 mt-2 pt-2">
             <div className="flex justify-between">
@@ -83,7 +83,7 @@ const OptimizationResults = ({ selectedBills, totalSelected, budget, onClose, al
                 {selectedBillsDetails.map(bill => (
                   <tr key={bill.id} className="border-b border-gray-600">
                     <td className="p-4">{bill.name}</td>
-                    <td className="p-4">${bill.amount.toFixed(2)}</td>
+                    <td className="p-4">Rs{bill.amount.toFixed(2)}</td>
                     <td className="p-4">{bill.category}</td>
                     <td className="p-4">{new Date(bill.date).toLocaleDateString()}</td>
                   </tr>
@@ -95,7 +95,7 @@ const OptimizationResults = ({ selectedBills, totalSelected, budget, onClose, al
 
         <p className="text-sm text-gray-400 text-center">
           {remainingBudget >= 0 
-            ? `Optimized selection fits within your budget with $${remainingBudget.toFixed(2)} remaining.`
+            ? `Optimized selection fits within your budget with Rs.${remainingBudget.toFixed(2)} remaining.`
             : 'Warning: Current selection exceeds your budget.'}
         </p>
       </div>
@@ -183,7 +183,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <p className="text-gray-400 mb-1">Total Monthly Bills</p>
-            <p className="text-2xl font-bold">${totalAmount.toFixed(2)}</p>
+            <p className="text-2xl font-bold">Rs{totalAmount.toFixed(2)}</p>
           </div>
           <div>
             <p className="text-gray-400 mb-1">Number of Bills</p>
@@ -265,7 +265,7 @@ const Dashboard = () => {
                   }`}
                 >
                   <td className="p-4">{bill.name}</td>
-                  <td className="p-4">${bill.amount.toFixed(2)}</td>
+                  <td className="p-4">Rs.{bill.amount.toFixed(2)}</td>
                   <td className="p-4">{bill.category}</td>
                   <td className="p-4">{new Date(bill.date).toLocaleDateString()}</td>
                   <td className="p-4">

@@ -33,11 +33,11 @@ const BillChart = () => {
           />
           <YAxis 
             stroke="#9CA3AF"
-            tickFormatter={value => `$${value}`}
+            tickFormatter={value => `Rs.${value}`}
           />
           <Tooltip 
             contentStyle={{ backgroundColor: '#1F2937', border: 'none' }}
-            formatter={value => [`$${value}`, 'Total Amount']}
+            formatter={value => [`Rs.${value}`, 'Total Amount']}
           />
           <Legend />
           <Line 
