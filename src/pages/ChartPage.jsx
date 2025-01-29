@@ -35,7 +35,7 @@ const ChartPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-lg font-medium text-gray-400 mb-2">Total Expenses</h3>
-          <p className="text-3xl font-bold">${totalAmount.toFixed(2)}</p>
+          <p className="text-3xl font-bold">Rs.{totalAmount.toFixed(2)}</p>
         </div>
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-lg font-medium text-gray-400 mb-2">Monthly Average</h3>
